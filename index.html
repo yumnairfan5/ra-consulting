@@ -93,7 +93,7 @@
   .team-name { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
   .team-role { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; display: block; }
   .team-info { display: flex; flex-direction: column; gap: 4px; }
-  .team-bio { font-size: 13px; color: var(--muted); line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 12; -webkit-box-orient: vertical; overflow: hidden; }
+  .team-bio { font-size: 13px; color: var(--muted); line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 20; -webkit-box-orient: vertical; overflow: hidden; }
   .team-phone { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 6px; margin-top: 6px; }
   .team-phone svg { width: 14px; height: 14px; stroke: var(--gold); fill: none; stroke-width: 2; flex-shrink: 0; }
 
@@ -379,10 +379,12 @@
         <div class="team-name">Bhawani Prasad Chavali</div>
         <span class="team-role">Collaborative Partner</span>
         <p class="team-bio">IIM-A alumnus and Doctoral Research Scholar at XLRI-IPAG, with 27+ years in Learning, Leadership Development and HR. CEO of Pramana Educare LLP, Executive and Behavioural Coach, and internationally recognised MBTI and EI psychometry facilitator. Guest lecturer at leading business schools.</p>
+        <!--
         <div class="team-phone">
           <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
           Placeholder
-        </div>
+        </div> 
+        -->
       </div>
     </div>
   </div>
@@ -613,14 +615,9 @@
       <p>Whether you are a professional looking to transform your career or a college exploring placement partnerships, reach out and we will get back to you within 48 hours.</p>
       <div class="contact-emails">
         <div class="contact-email-item">
-          <label>Partner and institution enquiries</label>
-          <a href="mailto:PLACEHOLDER_PARTNER_EMAIL">PLACEHOLDER PARTNER EMAIL</a>
-          <span class="sub">For college partnerships and training partner enquiries</span>
-        </div>
-        <div class="contact-email-item">
-          <label>Student and professional enquiries</label>
-          <a href="mailto:raghureddy@ra-consulting.in">raghureddy@ra-consulting.in</a>
-          <span class="sub">Send your resume and queries here</span>
+          <label>All enquiries</label>
+          <a href="mailto:info@ra-consulting.in">info@ra-consulting.in</a>
+          <span class="sub">For professionals, colleges, and training partner enquiries</span>
         </div>
       </div>
     </div>
@@ -690,9 +687,7 @@
       setTimeout(() => { btn.textContent = 'Send enquiry'; btn.style.background = ''; btn.style.color = ''; }, 2500);
       return;
     }
-    const toEmail = (type === 'A college / institution' || type === 'A training partner')
-      ? 'PLACEHOLDER_PARTNER_EMAIL'
-      : 'raghureddy@ra-consulting.in';
+    const toEmail = 'info@ra-consulting.in';
     const subject = encodeURIComponent('Enquiry from RA Consulting website - ' + type);
     const body = encodeURIComponent('Name: ' + name + '\nPhone: ' + phone + '\nEmail: ' + email + '\nEnquiry type: ' + type + '\n\nMessage:\n' + (msg || '(no message provided)'));
     window.location.href = 'mailto:' + toEmail + '?subject=' + subject + '&body=' + body;
